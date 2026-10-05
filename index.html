@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FluidPod</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: #000;
+    color: #fff;
+    font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== Hero 顶部 ===== */
+  .hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: radial-gradient(ellipse at 50% 40%, #1a0f2e 0%, #000 70%);
+  }
+  .hero-img {
+    width: 100%;
+    max-width: 1000px;
+    display: block;
+    padding-top: 0;
+  }
+  .hero-title {
+    font-size: clamp(40px, 9vw, 96px);
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: -10px 0 0;
+    text-align: center;
+    background: linear-gradient(180deg, #ffffff 0%, #d9c7ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero-sub {
+    margin-top: 14px;
+    font-size: clamp(15px, 2.6vw, 22px);
+    color: #c9a4ff;
+    letter-spacing: 6px;
+    text-shadow: 0 0 20px rgba(190, 120, 255, 0.6);
+  }
+  .scroll-hint {
+    margin: 36px 0 30px;
+    color: #6b5a8a;
+    font-size: 13px;
+    letter-spacing: 2px;
+    animation: bob 2s ease-in-out infinite;
+  }
+  @keyframes bob {
+    0%, 100% { transform: translateY(0); opacity: .6; }
+    50% { transform: translateY(6px); opacity: 1; }
+  }
+
+  /* ===== 下方内容 ===== */
+  .content {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 60px 24px 100px;
+    text-align: center;
+  }
+  .badge {
+    display: inline-block;
+    padding: 6px 18px;
+    border: 1px solid rgba(190, 120, 255, 0.5);
+    border-radius: 999px;
+    color: #c9a4ff;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 26px;
+    background: rgba(150, 80, 230, 0.08);
+  }
+  .release-title {
+    font-size: clamp(26px, 5vw, 42px);
+    font-weight: 800;
+    line-height: 1.35;
+    margin-bottom: 22px;
+  }
+  .release-desc {
+    font-size: clamp(15px, 2.4vw, 18px);
+    line-height: 1.9;
+    color: #b9b2c7;
+    margin-bottom: 14px;
+  }
+  .players {
+    margin: 26px 0 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  .player-chip {
+    padding: 10px 22px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 15px;
+    color: #e6dff5;
+  }
+  .note {
+    font-size: 13px;
+    color: #6f6684;
+    line-height: 1.8;
+    margin-bottom: 46px;
+  }
+
+  /* ===== 按钮 ===== */
+  .actions {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 38px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-github {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+  }
+  .btn-github:hover { background: rgba(255,255,255,0.08); border-color: #fff; }
+  .btn-download {
+    background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+    color: #fff;
+    border: none;
+    box-shadow: 0 8px 30px rgba(140, 80, 240, 0.45);
+  }
+  .btn-download:hover { box-shadow: 0 12px 40px rgba(150, 90, 255, 0.65); }
+  .btn svg { width: 20px; height: 20px; }
+
+  footer {
+    margin-top: 70px;
+    font-size: 12px;
+    color: #4a4358;
+  }
+
+  /* toast */
+  #toast {
+    position: fixed;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%) translateY(20px);
+    background: #2a2238;
+    color: #e6dff5;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-size: 14px;
+    border: 1px solid rgba(190,120,255,.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease, transform .25s ease;
+    z-index: 99;
+  }
+  #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+
+  <!-- ===== 顶部 Hero ===== -->
+  <section class="hero">
+    <img class="hero-img" src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/Q5NSbRKP7oTFzMxsiifcnRdUnef" alt="FluidPod">
+    <h1 class="hero-title">FluidPod</h1>
+    <div class="hero-sub">让你的电脑更灵动</div>
+    <div class="scroll-hint">向下滚动查看 ▾</div>
+  </section>
+
+  <!-- ===== 发布信息 ===== -->
+  <main class="content">
+    <h2 class="release-title">FluidPod 正式发布</h2>
+
+    <p class="release-desc">
+      一个为 Windows 打造的灵动胶囊，支持歌词、封面、天气、多播放器控制。
+    </p>
+
+    <p class="release-desc">适配多种播放器：</p>
+    <div class="players">
+      <span class="player-chip">QQ音乐</span>
+      <span class="player-chip">浏览器</span>
+      <span class="player-chip">汽水音乐</span>
+    </div>
+
+    <p class="note">
+      （由于技术有限，功能可能不多，如有更好的功能推荐或问题反馈，请联系我们）
+    </p>
+
+    <!-- ===== 按钮 ===== -->
+    <div class="actions">
+      <a class="btn btn-github" href="https://github.com/yibaiya123/FluidPod" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C15.3 4.7 16.3 5 16.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+        GitHub 仓库
+      </a>
+      <a class="btn btn-download" href="https://github.com/yibaiya123/FluidPod/releases" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.6l3.3-3.3 1.4 1.4-5.7 5.7-5.7-5.7 1.4-1.4L11 13.6V3h1zm-7 16h14v2H5v-2z"/></svg>
+        立即下载
+      </a>
+    </div>
+
+    <footer>© 2026 FluidPod · Made for Windows</footer>
+  </main>
+
+</body>
+</html>
